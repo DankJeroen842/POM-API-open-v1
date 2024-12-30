@@ -158,9 +158,9 @@ queryPoMAPIAdvanced("Generate an advanced analysis on market trends.")
   .then(response => console.log(response))
   .catch(error => console.error(error));
 ```
-# MORE INFORMATION IN OUR DOCUMENTATION 
+# View our Documentation for more information
 
-## DOCUMENTATION GIVES A FULL BRIEFING ON PROOF OF ME, ANY QUESTIONS FEEL FREE TO ASK QUESTIONS IN OUR DISCORD OR TWITTER
+## Our Docs provides everything you need to know, including our roadmap and future plans, along with the actual functionality of PoM
 
 Discord: https://discord.gg/RuphQvfd
 Twitter: https://x.com/pomdotfun
