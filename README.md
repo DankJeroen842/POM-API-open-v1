@@ -169,8 +169,8 @@ queryPoMAPIAdvanced("Generate an advanced analysis on market trends.")
 - Discord: https://discord.gg/RuphQvfd
 - Twitter: https://x.com/pomdotfun
 - Website: https://proofofme.fun
-- Docs: xxx
+- Docs: 
 
 ---
 
-## Contract address: 
+## Contract address: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
