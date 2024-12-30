@@ -1,49 +1,80 @@
-# PoM Unified API v1.0
+# Integrating the PoM Unified API (v1.0)
 
-The **Proof of Me (PoM) Unified API** simplifies access to cutting-edge AI services by integrating multiple providers under one unified key. Version 1.0 supports the following providers:
-- **Gemini**: Multimodal AI for text and vision-based tasks.
-- **OpenAI**: Advanced text generation with GPT-4 and GPT-3.5.
-- **ElevenLabs**: High-quality audio and voice synthesis.
-- **RunwayML**: Tools for media and generative workflows.
-
-This API allows developers to build intelligent agents, automate workflows, and accelerate AI innovation seamlessly.
+The PoM Unified API (v1.0) simplifies connecting to advanced AI services by offering a single interface for multiple providers like OpenAI, Gemini, ElevenLabs, and RunwayML. Follow the steps below to integrate it seamlessly into your application.
 
 ---
 
-## Installation
+## 1. Registering a User
 
-The PoM Unified API uses RESTful endpoints. Simply include your API key in the headers to authenticate.
+To start using the PoM API, register your account with your AI service keys.
 
----
+### **Endpoint:**
+`POST /api/v1/user/register-user`
 
-## Example Integration
+### **Request Body:**
+```json
+{
+  "email": "your-email@example.com",
+  "geminiKey": "your-gemini-key",
+  "openAIKey": "your-openai-key",
+  "elevenLabsKey": "your-elevenlabs-key",
+  "runwayMLKey": "your-runwayml-key"
+}
+Response:
+json
+Copy code
+{
+  "statusCode": 200,
+  "success": true,
+  "message": "User Registered Successfully, Collect the Token and start playing!",
+  "data": "your-generated-bearer-token"
+}
+Save the data field (Bearer Token) for authenticating API requests.
+2. Using AI Services
+Endpoint:
+POST /api/v1/ai/services?searchModel={model-id}
 
-Here’s how to send a prompt to the API for text generation with OpenAI:
+Query Parameters:
+Parameter	Type	Description	Required
+searchModel	Number	Model or service ID (e.g., 1 for Gemini, 2 for OpenAI, etc.)	Yes
+Request Body (Form Data):
+json
+Copy code
+{
+  "prompt": "Your question or command here"
+}
+Authentication:
+Add your Bearer Token to the Authorization header:
 
-### Code Example (JavaScript)
-```javascript
-const fetch = require('node-fetch');
+text
+Copy code
+Authorization: Bearer your-generated-bearer-token
+Example Code: Query AI Services
+Below is an example of a JavaScript function to make a request:
+
+javascript
+Copy code
+const fetch = require("node-fetch");
 
 async function queryPoMAPI(prompt) {
-    const response = await fetch("https://api.pom.example/ai/services?searchModel=4", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer YOUR_API_TOKEN`,
-        },
-        body: JSON.stringify({ prompt }),
-    });
+  const response = await fetch("https://api.pom.example/ai/services?searchModel=4", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer your-generated-bearer-token",
+    },
+    body: JSON.stringify({ prompt }),
+  });
 
-    if (!response.ok) {
-        throw new Error("Error connecting to PoM API");
-    }
+  if (!response.ok) {
+    throw new Error("Error connecting to PoM API");
+  }
 
-    const data = await response.json();
-    return data.response;
+  const data = await response.json();
+  return data.response;
 }
 
-// Example usage
-queryPoMAPI("What are the key benefits of AI?")
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
-
+// Example Usage:
+queryPoMAPI("What is the purpose of the PoM Unified API?")
+  .then(response => console.log(response))
+  .catch(error => console.error(error));
