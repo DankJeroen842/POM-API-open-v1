@@ -171,4 +171,6 @@ queryPoMAPIAdvanced("Generate an advanced analysis on market trends.")
 - Website: https://proofofme.fun
 - Docs: xxx
 
-- Contract address: 
+---
+
+## Contract address: 
