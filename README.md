@@ -160,8 +160,15 @@ queryPoMAPIAdvanced("Generate an advanced analysis on market trends.")
 ```
 # View our Documentation for more information
 
+---
+
 ## Our Docs provides everything you need to know, including our roadmap and future plans, along with the actual functionality of PoM
 
-Discord: https://discord.gg/RuphQvfd
-Twitter: https://x.com/pomdotfun
-Website: https://proofofme.fun
+---
+
+*Discord: https://discord.gg/RuphQvfd
+*Twitter: https://x.com/pomdotfun
+*Website: https://proofofme.fun
+*Docs: xxx
+
+*Contract address: 
