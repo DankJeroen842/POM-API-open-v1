@@ -78,3 +78,82 @@ async function queryPoMAPI(prompt) {
 queryPoMAPI("What is the purpose of the PoM Unified API?")
   .then(response => console.log(response))
   .catch(error => console.error(error));
+
+```
+
+# The Second Part of the PoM Unified API (v1.0)
+
+The second part of the PoM Unified API (v1.0) focuses on advanced querying and retrieval services, leveraging intelligent workflows to simplify interactions with supported AI models. These endpoints enable seamless integration with AI functionalities designed to adapt to complex requirements.
+
+---
+
+## 2. Querying AI Services: Advanced Features
+
+### Endpoint:
+POST /api/v1/ai/services?queryType=2&searchModel={model-id}
+
+yaml
+Copy code
+
+This endpoint allows users to send more advanced queries to supported AI models.
+
+---
+
+### Query Parameters:
+
+| Parameter       | Type   | Description                                                   | Required |
+|------------------|--------|---------------------------------------------------------------|----------|
+| `queryType`      | Number | Identifies the advanced query type (always `2` for this).     | Yes      |
+| `searchModel`    | Number | Model or service ID (e.g., `1` for Gemini, `2` for OpenAI).   | Yes      |
+
+---
+
+### Request Body:
+
+```json
+{
+  "advancedPrompt": "Provide a detailed analysis of climate change trends using AI insights."
+}
+Authentication: Include your Bearer Token in the Authorization header:
+
+text
+Copy code
+Authorization: Bearer your-generated-bearer-token
+
+Example Code: Advanced Query Integration
+Below is an example of using JavaScript to make an advanced query request:
+
+javascript
+Copy code
+const fetch = require("node-fetch");
+
+async function queryPoMAPIAdvanced(advancedPrompt) {
+  const response = await fetch("https://api.pom.example/ai/services?queryType=2&searchModel=23", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer your-generated-bearer-token",
+    },
+    body: JSON.stringify({ advancedPrompt }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Error connecting to PoM API for advanced query");
+  }
+
+  const data = await response.json();
+  return data.response;
+}
+
+// Example Usage:
+queryPoMAPIAdvanced("Generate an advanced analysis on market trends.")
+  .then(response => console.log(response))
+  .catch(error => console.error(error));
+```
+# MORE INFORMATION IN OUR DOCUMENTATION 
+
+## DOCUMENTATION GIVES A FULL BRIEFING ON PROOF OF ME, ANY QUESTIONS FEEL FREE TO ASK QUESTIONS IN OUR DISCORD OR TWITTER
+
+Discord: https://discord.gg/RuphQvfd
+Twitter: https://x.com/pomdotfun
+Website: https://proofofme.fun
