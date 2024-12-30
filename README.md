@@ -1,7 +1,15 @@
+# Proof of Me -- API v1.0
+![Untitled design - 2024-12-30T223823 579](https://github.com/user-attachments/assets/3a278159-8ca8-4e7a-b44e-59e3c4047fbf)
+
+---
+
 # Integrating the PoM Unified API (v1.0)
 
 The PoM Unified API (v1.0) simplifies connecting to advanced AI services by offering a single interface for multiple providers like OpenAI, Gemini, ElevenLabs, and RunwayML. Follow the steps below to integrate it seamlessly into your application.
 
+## Visual Representation on how the PoM Unified API (v1.0) works: 
+
+![Untitled design - 2024-12-30T221727 463](https://github.com/user-attachments/assets/54caa40c-6dc7-4d4f-97e9-b01f2436af65)
 ---
 
 ## 1. Registering a User
