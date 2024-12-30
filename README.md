@@ -9,7 +9,7 @@ The PoM Unified API (v1.0) simplifies connecting to advanced AI services by offe
 
 ## Visual Representation on how the PoM Unified API (v1.0) works: 
 
-![Untitled design - 2024-12-30T221727 463](https://github.com/user-attachments/assets/54caa40c-6dc7-4d4f-97e9-b01f2436af65)
+![Untitled design - 2024-12-30T223904 272](https://github.com/user-attachments/assets/05d48802-0378-4b92-8e87-e2bc5c2282b7)
 ---
 
 ## 1. Registering a User
